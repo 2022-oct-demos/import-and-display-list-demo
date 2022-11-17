@@ -1,7 +1,7 @@
 /* Imports */
 
 /* Get DOM Elements */
-
+const moviesContainer = document.getElementById('movie-list');
 /* State */
 
 /* Events */
