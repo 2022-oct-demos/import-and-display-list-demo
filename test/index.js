@@ -4,8 +4,10 @@
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const { window } = new JSDOM(``, {
-    url: 'http://localhost:5500'
+    url: 'http://localhost:5500',
 });
+const supabase = require('@supabase/supabase-js');
+global.supabase = supabase;
 global.window = window;
 global.document = window.document;
 global.FormData = window.FormData;
