@@ -7,3 +7,8 @@ const SUPABASE_KEY =
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // write a fetch function for each of the 4 domains
+
+export async function fetchMovies() {
+    const response = await client.from('movies').select('*');
+    return response.data;
+}
